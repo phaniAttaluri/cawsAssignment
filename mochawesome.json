@@ -1,0 +1,452 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 8,
+    "passes": 3,
+    "pending": 0,
+    "failures": 4,
+    "start": "2021-05-24T15:59:19.105Z",
+    "end": "2021-05-24T16:29:45.040Z",
+    "duration": 86178,
+    "testsRegistered": 8,
+    "passPercent": 37.5,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "2df853be-379a-490b-9aab-86b8f39fc5e1",
+      "title": "",
+      "fullFile": "cypress/integration/apiTests/getRequestApi.spec.js",
+      "file": "cypress/integration/apiTests/getRequestApi.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "512b7d00-900e-412f-845f-554307152ed8",
+          "title": "Get Request",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validate Get Request api",
+              "fullTitle": "Get Request Validate Get Request api",
+              "timedOut": null,
+              "duration": 5239,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"GET\",\n  url: \"http://localhost:3000/posts\",\n  headers: {\n    accept: \"application/json\"\n  }\n}).then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body).to.not.be.null;\n  let body = JSON.parse(JSON.stringify(response.body));\n  cy.log(body);\n  expect(body[0]).has.property(\"title\", \"json-server\");\n  expect(body[1]).has.property(\"author\", \"Tom Jones\");\n});",
+              "err": {},
+              "uuid": "656de768-c0be-48f7-881f-e0d676a0e39a",
+              "parentUUID": "512b7d00-900e-412f-845f-554307152ed8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "656de768-c0be-48f7-881f-e0d676a0e39a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5239,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "6bf6bd4b-1535-4f0c-ab68-65ffca449076",
+      "title": "",
+      "fullFile": "cypress/integration/apiTests/postRequestApi.spec.js",
+      "file": "cypress/integration/apiTests/postRequestApi.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e4006070-f8d3-4136-9f16-6e871a1eeb79",
+          "title": "Post Request",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validating Post Request API",
+              "fullTitle": "Post Request Validating Post Request API",
+              "timedOut": null,
+              "duration": 4195,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"POST\",\n  url: \"http://localhost:3000/posts\",\n  body: {\n    title: \"Want to learn automation testing?\",\n    author: \"Sarah Jones\"\n  }\n}).then(response => {\n  expect(response.status).to.eql(201);\n});",
+              "err": {},
+              "uuid": "09eca7b9-8b20-4b9c-8a70-863afb48f881",
+              "parentUUID": "e4006070-f8d3-4136-9f16-6e871a1eeb79",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "09eca7b9-8b20-4b9c-8a70-863afb48f881"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4195,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "bab68ed0-6f52-4720-9363-08b65e9c2d2e",
+      "title": "",
+      "fullFile": "cypress/integration/apiTests/signup_login_FINAL (1).js",
+      "file": "cypress/integration/apiTests/signup_login_FINAL (1).js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "761a5e18-0ff2-4d3c-b6d7-bb2c029e2dd2",
+          "title": "Signup Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "d6e027ed-f61e-4df5-a64f-10acd3c45139",
+              "title": "UI tests",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Test valid signup",
+                  "fullTitle": "Signup Test UI tests Test valid signup",
+                  "timedOut": null,
+                  "duration": 58824,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get(\"#newCustomerLink\").contains(\"Not yet a customer?\").click({\n  force: true\n});\ncy.get(\"#emailControl\").type(email);\ncy.get(\"#passwordControl\").type(password);\ncy.get(\"#repeatPasswordControl\").type(password);\ncy.get(\".mat-form-field-type-mat-select > .mat-form-field-wrapper > .mat-form-field-flex > .mat-form-field-infix\").click();\ncy.get(\"#mat-option-3 > .mat-option-text\").click();\ncy.get(\"#securityAnswerControl\").type(securityAnswer);\ncy.get(\"#registerButton\").click();\ncy.get(\".mat-snack-bar-container\").contains(\"Registration completed successfully.\");",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `.cdk-overlay-backdrop`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `UI tests`",
+                    "estack": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `.cdk-overlay-backdrop`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `UI tests`\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress\\integration\\apiTests\\signup_login_FINAL%20(1).js:111:10)",
+                    "diff": null
+                  },
+                  "uuid": "7be7f948-3b2d-4b36-b07c-0a6f83a09406",
+                  "parentUUID": "d6e027ed-f61e-4df5-a64f-10acd3c45139",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Test valid login",
+                  "fullTitle": "Signup Test UI tests Test valid login",
+                  "timedOut": null,
+                  "duration": 0,
+                  "state": "skipped",
+                  "speed": null,
+                  "pass": false,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get(\"#email\").type(email);\ncy.get(\"#password\").type(password);\ncy.get(\"#loginButton\").click();\ncy.get(\".fa-layers-counter\").contains(0);",
+                  "err": {},
+                  "uuid": "80742f48-4d00-4c41-bd7d-9aa71b3744c8",
+                  "parentUUID": "d6e027ed-f61e-4df5-a64f-10acd3c45139",
+                  "isHook": false,
+                  "skipped": true
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "7be7f948-3b2d-4b36-b07c-0a6f83a09406"
+              ],
+              "pending": [],
+              "skipped": [
+                "80742f48-4d00-4c41-bd7d-9aa71b3744c8"
+              ],
+              "duration": 58824,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "23df6892-1bf0-4fd3-907b-a83915eb929d",
+              "title": "API tests",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Test Login via API (Non UI)",
+                  "fullTitle": "Signup Test API tests Test Login via API (Non UI)",
+                  "timedOut": null,
+                  "duration": 4206,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.request(\"POST\", \"http://localhost:3000/rest/user/login\", userCredentials).then(response => {\n  expect(response.status).to.eq(200);\n});",
+                  "err": {
+                    "message": "CypressError: `cy.request()` failed on:\n\nhttp://localhost:3000/rest/user/login\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: http://localhost:3000/rest/user/login\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-type\": \"application/json\",\n  \"content-length\": 72\n}\nBody: {\"email\":\"auto_7pwm7o4uwse7pwm7o4uwse@gmail.com\",\"password\":\"Password1\"}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 404 - Not Found\nHeaders: {\n  \"x-powered-by\": \"Express\",\n  \"vary\": \"Origin, X-HTTP-Method-Override, Accept-Encoding\",\n  \"access-control-allow-credentials\": \"true\",\n  \"cache-control\": \"no-cache\",\n  \"pragma\": \"no-cache\",\n  \"expires\": \"-1\",\n  \"x-content-type-options\": \"nosniff\",\n  \"content-type\": \"application/json; charset=utf-8\",\n  \"content-length\": \"2\",\n  \"etag\": \"W/\\\"2-vyGp6PvFo4RvsFtPoIWeCReyIC8\\\"\",\n  \"date\": \"Mon, 24 May 2021 16:23:34 GMT\",\n  \"connection\": \"keep-alive\"\n}\nBody: {}\n\n\nhttps://on.cypress.io/request",
+                    "estack": "CypressError: `cy.request()` failed on:\n\nhttp://localhost:3000/rest/user/login\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: http://localhost:3000/rest/user/login\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-type\": \"application/json\",\n  \"content-length\": 72\n}\nBody: {\"email\":\"auto_7pwm7o4uwse7pwm7o4uwse@gmail.com\",\"password\":\"Password1\"}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 404 - Not Found\nHeaders: {\n  \"x-powered-by\": \"Express\",\n  \"vary\": \"Origin, X-HTTP-Method-Override, Accept-Encoding\",\n  \"access-control-allow-credentials\": \"true\",\n  \"cache-control\": \"no-cache\",\n  \"pragma\": \"no-cache\",\n  \"expires\": \"-1\",\n  \"x-content-type-options\": \"nosniff\",\n  \"content-type\": \"application/json; charset=utf-8\",\n  \"content-length\": \"2\",\n  \"etag\": \"W/\\\"2-vyGp6PvFo4RvsFtPoIWeCReyIC8\\\"\",\n  \"date\": \"Mon, 24 May 2021 16:23:34 GMT\",\n  \"connection\": \"keep-alive\"\n}\nBody: {}\n\n\nhttps://on.cypress.io/request\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:140051:21\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:10791:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:8726:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:8783:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:8828:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:8908:18)\n    at _drainQueueStep (http://localhost:3000/__cypress/runner/cypress_runner.js:5498:12)\n    at _drainQueue (http://localhost:3000/__cypress/runner/cypress_runner.js:5491:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:5507:5)\n    at Async.drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:5377:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress\\integration\\apiTests\\signup_login_FINAL%20(1).js:143:10)",
+                    "diff": null
+                  },
+                  "uuid": "bd25d42d-b2a3-4845-9c77-9547466a7a1b",
+                  "parentUUID": "23df6892-1bf0-4fd3-907b-a83915eb929d",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Login via Token (Non UI)",
+                  "fullTitle": "Signup Test API tests Login via Token (Non UI)",
+                  "timedOut": null,
+                  "duration": 2999,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.request(\"POST\", \"http://localhost:3000/rest/user/login\", userCredentials).its('body').then(body => {\n  const token = body.authentication.token;\n  cy.wrap(token).as(\"userToken\");\n});",
+                  "err": {
+                    "message": "CypressError: `cy.request()` failed on:\n\nhttp://localhost:3000/rest/user/login\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: http://localhost:3000/rest/user/login\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-type\": \"application/json\",\n  \"content-length\": 72\n}\nBody: {\"email\":\"auto_7pwm7o4uwse7pwm7o4uwse@gmail.com\",\"password\":\"Password1\"}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 404 - Not Found\nHeaders: {\n  \"x-powered-by\": \"Express\",\n  \"vary\": \"Origin, X-HTTP-Method-Override, Accept-Encoding\",\n  \"access-control-allow-credentials\": \"true\",\n  \"cache-control\": \"no-cache\",\n  \"pragma\": \"no-cache\",\n  \"expires\": \"-1\",\n  \"x-content-type-options\": \"nosniff\",\n  \"content-type\": \"application/json; charset=utf-8\",\n  \"content-length\": \"2\",\n  \"etag\": \"W/\\\"2-vyGp6PvFo4RvsFtPoIWeCReyIC8\\\"\",\n  \"date\": \"Mon, 24 May 2021 16:23:39 GMT\",\n  \"connection\": \"keep-alive\"\n}\nBody: {}\n\n\nhttps://on.cypress.io/request",
+                    "estack": "CypressError: `cy.request()` failed on:\n\nhttp://localhost:3000/rest/user/login\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: http://localhost:3000/rest/user/login\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-type\": \"application/json\",\n  \"content-length\": 72\n}\nBody: {\"email\":\"auto_7pwm7o4uwse7pwm7o4uwse@gmail.com\",\"password\":\"Password1\"}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 404 - Not Found\nHeaders: {\n  \"x-powered-by\": \"Express\",\n  \"vary\": \"Origin, X-HTTP-Method-Override, Accept-Encoding\",\n  \"access-control-allow-credentials\": \"true\",\n  \"cache-control\": \"no-cache\",\n  \"pragma\": \"no-cache\",\n  \"expires\": \"-1\",\n  \"x-content-type-options\": \"nosniff\",\n  \"content-type\": \"application/json; charset=utf-8\",\n  \"content-length\": \"2\",\n  \"etag\": \"W/\\\"2-vyGp6PvFo4RvsFtPoIWeCReyIC8\\\"\",\n  \"date\": \"Mon, 24 May 2021 16:23:39 GMT\",\n  \"connection\": \"keep-alive\"\n}\nBody: {}\n\n\nhttps://on.cypress.io/request\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:140051:21\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:10791:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:8726:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:8783:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:8828:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:8908:18)\n    at _drainQueueStep (http://localhost:3000/__cypress/runner/cypress_runner.js:5498:12)\n    at _drainQueue (http://localhost:3000/__cypress/runner/cypress_runner.js:5491:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:5507:5)\n    at Async.drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:5377:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress\\integration\\apiTests\\signup_login_FINAL%20(1).js:148:10)",
+                    "diff": null
+                  },
+                  "uuid": "8ebeb17d-da8e-484d-b81c-ae4b0014353b",
+                  "parentUUID": "23df6892-1bf0-4fd3-907b-a83915eb929d",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "bd25d42d-b2a3-4845-9c77-9547466a7a1b",
+                "8ebeb17d-da8e-484d-b81c-ae4b0014353b"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 7205,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "ba4c61f6-837a-4c77-a65c-a433f083cc3f",
+      "title": "",
+      "fullFile": "cypress/integration/apiTests/updateRequestApi.spec.js",
+      "file": "cypress/integration/apiTests/updateRequestApi.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "31fd8540-6067-430d-90dd-6391e2c02709",
+          "title": "Update Request",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validating Update Request api",
+              "fullTitle": "Update Request Validating Update Request api",
+              "timedOut": null,
+              "duration": 6905,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"PUT\",\n  url: \"http://localhost:3000/posts/2\",\n  body: {\n    title: \"Where can i buy apples?\",\n    author: \"Tom Jones\"\n  }\n}).then(response => {\n  expect(response.status).to.eql(200);\n});",
+              "err": {},
+              "uuid": "c6b8946c-597e-4ffa-8138-bde9a0556e3e",
+              "parentUUID": "31fd8540-6067-430d-90dd-6391e2c02709",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c6b8946c-597e-4ffa-8138-bde9a0556e3e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6905,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "cae05a91-afa2-42b7-be50-1bb0425028aa",
+      "title": "",
+      "fullFile": "cypress/integration/apiTests/deleteRequestApi.spec.js",
+      "file": "cypress/integration/apiTests/deleteRequestApi.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "45727bb5-7927-495c-b266-2151cf892734",
+          "title": "Delete Request",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validating Delete Request api",
+              "fullTitle": "Delete Request Validating Delete Request api",
+              "timedOut": null,
+              "duration": 3810,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"DELETE\",\n  url: \"http://localhost:3000/posts/13\"\n}).then(response => {\n  expect(response.status).to.eql(200);\n});",
+              "err": {
+                "message": "CypressError: `cy.request()` failed on:\n\nhttp://localhost:3000/posts/13\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: DELETE\nURL: http://localhost:3000/posts/13\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-length\": 0\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 404 - Not Found\nHeaders: {\n  \"x-powered-by\": \"Express\",\n  \"vary\": \"Origin, Accept-Encoding\",\n  \"access-control-allow-credentials\": \"true\",\n  \"cache-control\": \"no-cache\",\n  \"pragma\": \"no-cache\",\n  \"expires\": \"-1\",\n  \"x-content-type-options\": \"nosniff\",\n  \"content-type\": \"application/json; charset=utf-8\",\n  \"content-length\": \"2\",\n  \"etag\": \"W/\\\"2-vyGp6PvFo4RvsFtPoIWeCReyIC8\\\"\",\n  \"date\": \"Mon, 24 May 2021 15:59:19 GMT\",\n  \"connection\": \"keep-alive\"\n}\nBody: {}\n\n\nhttps://on.cypress.io/request",
+                "estack": "CypressError: `cy.request()` failed on:\n\nhttp://localhost:3000/posts/13\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: DELETE\nURL: http://localhost:3000/posts/13\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-length\": 0\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 404 - Not Found\nHeaders: {\n  \"x-powered-by\": \"Express\",\n  \"vary\": \"Origin, Accept-Encoding\",\n  \"access-control-allow-credentials\": \"true\",\n  \"cache-control\": \"no-cache\",\n  \"pragma\": \"no-cache\",\n  \"expires\": \"-1\",\n  \"x-content-type-options\": \"nosniff\",\n  \"content-type\": \"application/json; charset=utf-8\",\n  \"content-length\": \"2\",\n  \"etag\": \"W/\\\"2-vyGp6PvFo4RvsFtPoIWeCReyIC8\\\"\",\n  \"date\": \"Mon, 24 May 2021 15:59:19 GMT\",\n  \"connection\": \"keep-alive\"\n}\nBody: {}\n\n\nhttps://on.cypress.io/request\n    at http://automationpractice.com/__cypress/runner/cypress_runner.js:140051:21\n    at tryCatcher (http://automationpractice.com/__cypress/runner/cypress_runner.js:10791:23)\n    at Promise._settlePromiseFromHandler (http://automationpractice.com/__cypress/runner/cypress_runner.js:8726:31)\n    at Promise._settlePromise (http://automationpractice.com/__cypress/runner/cypress_runner.js:8783:18)\n    at Promise._settlePromise0 (http://automationpractice.com/__cypress/runner/cypress_runner.js:8828:10)\n    at Promise._settlePromises (http://automationpractice.com/__cypress/runner/cypress_runner.js:8908:18)\n    at _drainQueueStep (http://automationpractice.com/__cypress/runner/cypress_runner.js:5498:12)\n    at _drainQueue (http://automationpractice.com/__cypress/runner/cypress_runner.js:5491:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://automationpractice.com/__cypress/runner/cypress_runner.js:5507:5)\n    at Async.drainQueues (http://automationpractice.com/__cypress/runner/cypress_runner.js:5377:14)\nFrom Your Spec Code:\n    at Context.eval (http://automationpractice.com/__cypress/tests?p=cypress\\integration\\apiTests\\deleteRequestApi.spec.js:103:8)",
+                "diff": null
+              },
+              "uuid": "cfe16e35-b962-48dd-94d5-d56b0376800f",
+              "parentUUID": "45727bb5-7927-495c-b266-2151cf892734",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "cfe16e35-b962-48dd-94d5-d56b0376800f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 3810,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

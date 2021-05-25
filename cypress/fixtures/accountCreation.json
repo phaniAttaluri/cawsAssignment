@@ -1,0 +1,14 @@
+{
+    "email": "greg.sypolt@example.com",
+    "firstname": "greg",
+    "lastname": "sypolt",
+    "password": "12345",
+    "day": "17",
+    "month": "August",
+    "year": "1988",
+    "address": "601 university",
+    "city": "San Marcos",
+    "State": "Texas",
+    "postcode": "78666",
+    "phoneNumber": "9985700097"
+}

@@ -1,0 +1,29 @@
+{
+  "name": "cawstudiosassignment",
+  "version": "1.0.0",
+  "description": "CAW Studios Assignment Automation Framework",
+  "main": "index.js",
+  "scripts": {
+    
+    "allTests-webUiSpecFiles-chrome": "npx cyress run --browser chrome --spec 'cypress/integration/webUiSpecFiles/*'",
+    "allTests-webUiSpecFiles-headless": "npx cyress run --spec 'cypress/integration/webUiSpecFiles/*'",
+    "allTests-ApiSpecFiles-chrome": "npx cyress run --browser chrome --spec \"cypress/integration/apiTests/*\"",
+    "delete-results": "rm -rf cypress/results/* || true",
+    "delete-mochawesome-report": "rm -rf mochawesome-report/* || true",
+    "mochawesome-merge": "npx mochawesome-merge cypress/results/mochawesome/*.json > mochawesome.json && npx marge mochawesome.json",
+    "allTests-UI": "npm run delete-results && npm run delete-mochawesome-report && npm run allTests-webUiSpecFiles-headless && npm run mochawesome-merge",
+    "allTests-API": "npm run delete-results && npm run delete-mochawesome-report && npm run allTests-ApiSpecFiles-chrome && npm run mochawesome-merge"
+  },
+  "author": "Phani",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^7.3.0",
+    "cypress-file-upload": "^5.0.7",
+    "cypress-multi-reporters": "^1.5.0",
+    "mocha": "^8.4.0",
+    "mocha-junit-reporter": "^2.0.0",
+    "mochawesome": "^6.2.2",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0"
+  }
+}
